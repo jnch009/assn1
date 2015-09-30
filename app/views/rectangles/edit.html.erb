@@ -1,11 +1,12 @@
-<h1>New rectangle</h1>
-<%= form_for :rectangle, url: rectangles_path do |f| %>
-  
+<h1>Editing rectangle</h1>
+ 
+<%= form_for :rectangle, url: rectangle_path(@rectangle), method: :patch do |f| %>
+ 
   <% if @rectangle.errors.any? %>
     <div id="error_explanation">
       <h2>
         <%= pluralize(@rectangle.errors.count, "error") %> prohibited
-        this rectangle from being created:
+        this rectangle from being saved:
       </h2>
       <ul>
         <% @rectangle.errors.full_messages.each do |msg| %>
@@ -14,7 +15,7 @@
       </ul>
     </div>
   <% end %>
-
+ 
   <p>
     <%= f.label :Width %><br>
     <%= f.text_field :Width %>
@@ -29,9 +30,11 @@
     <%= f.label :Color%><br>
     <%= f.text_field :Color%>
   </p>
-
+ 
   <p>
     <%= f.submit %>
   </p>
+ 
 <% end %>
+ 
 <%= link_to 'Back', rectangles_path %>

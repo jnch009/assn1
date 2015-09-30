@@ -1,4 +1,5 @@
 <h1>Listing rectangles</h1>
+<body bgcolor="Cyan">
 <%= link_to 'New rectangle', new_rectangle_path %>
 <table>
   <tr>
@@ -7,20 +8,25 @@
     <th>Height</th>
     <th>Color</th>
     <th>Rectangle</th>
+    <th colspan="2"></th>
   </tr>
+  <%var_name = 1%>
   <%@rectangles.each do |rectangle| %>
     <tr>
-      <td><%=dom_id(rectangle)[dom_id(rectangle).length-1]%></td>
+      <td><%=var_name%></td>
       <td><%=rectangle.Width %></td>
       <td><%=rectangle.Height %></td>
-      <td><%=rectangle.Color %></td>
-      <td><canvas id="<%=dom_id(rectangle)%>" width="<%=rectangle.Width %>" height="<%=rectangle.Height %>" style="border:1px solid #000000;"></canvas></td>
+      <td><%=rectangle.Color%></td>
+      <td><canvas id="<%=var_name%>" width="<%=rectangle.Width %>" height="<%=rectangle.Height %>" style="border:1px solid #000000;"></canvas></td>
       <td><script>
-      var c = document.getElementById("<%=dom_id(rectangle)%>");
+      var c = document.getElementById("<%=var_name%>");
       var ctx = c.getContext("2d");
-      ctx.fillStyle = "<%=rectangle.Color %>";
+      ctx.fillStyle = "<%=rectangle.Color%>";
       ctx.fillRect(0,0,"<%=rectangle.Width %>","<%=rectangle.Height %>");
+      <%=var_name+=1%>;
       </script><td>
+      <td><%= link_to 'Show', rectangle_path(rectangle) %></td>
+      <td><%= link_to 'Edit', edit_rectangle_path(rectangle) %></td>
     </tr>
   <% end %>
 </table>

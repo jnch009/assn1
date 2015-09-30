@@ -21,4 +21,5 @@ ctx.fillStyle = "<%=@rectangle.Color%>";
 ctx.fillRect(0,0,"<%=@rectangle.Width%>","<%=@rectangle.Height%>");
 </script><br>
 
+<%= link_to 'Edit', edit_rectangle_path(@rectangle) %> |
 <%= link_to 'Back', rectangles_path %>
