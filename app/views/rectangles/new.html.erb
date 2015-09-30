@@ -1,4 +1,19 @@
 <%= form_for :rectangle, url: rectangles_path do |f| %>
+  
+  <% if @rectangle.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@rectangle.errors.count, "error") %> prohibited
+        this rectangle from being created:
+      </h2>
+      <ul>
+        <% @rectangle.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
   <p>
     <%= f.label :Width %><br>
     <%= f.text_field :Width %>

@@ -19,6 +19,6 @@ var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 ctx.fillStyle = "<%=@rectangle.Color%>";
 ctx.fillRect(0,0,"<%=@rectangle.Width%>","<%=@rectangle.Height%>");
-</script>
+</script><br>
 
 <%= link_to 'Back', rectangles_path %>
