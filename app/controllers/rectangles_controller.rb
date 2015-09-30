@@ -16,6 +16,6 @@ class RectanglesController < ApplicationController
 	end
 	private
   		def rectangle_params
-    		params.require(:rectangle).permit(:Width, :Height, :Color,:number)
+    		params.require(:rectangle).permit(:Width, :Height, :Color, :Numbers)
   		end
 end

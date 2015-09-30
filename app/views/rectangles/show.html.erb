@@ -1,9 +1,4 @@
 <p>
-  <strong>Number:</strong>
-  <%= @rectangle.number %>
-</p>
-
-<p>
   <strong>Width:</strong>
   <%= @rectangle.Width %>
 </p>
@@ -18,9 +13,9 @@
    <%= @rectangle.Color%>
 </p>
 
-<canvas id="<%= @rectangle.number %>" width="<%=@rectangle.Width%>" height="<%=@rectangle.Height%>" style="border:1px solid #000000;"></canvas>
+<canvas id="myCanvas" width="<%=@rectangle.Width%>" height="<%=@rectangle.Height%>" style="border:1px solid #000000;"></canvas>
 <script>
-var c = document.getElementById("<%= @rectangle.number %>");
+var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 ctx.fillStyle = "<%=@rectangle.Color%>";
 ctx.fillRect(0,0,"<%=@rectangle.Width%>","<%=@rectangle.Height%>");

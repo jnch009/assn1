@@ -1,7 +1,7 @@
 class CreateRectangles < ActiveRecord::Migration
   def change
     create_table :rectangles do |t|
-      t.integer :number
+      t.integer :Number
       t.integer :Width
       t.integer :Height
       t.string :Color

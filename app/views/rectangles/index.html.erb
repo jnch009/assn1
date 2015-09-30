@@ -10,13 +10,13 @@
   </tr>
   <%@rectangles.each do |rectangle| %>
     <tr>
-      <td><%=rectangle.number %></td>
+      <td><%=dom_id(rectangle)[dom_id(rectangle).length-1]%></td>
       <td><%=rectangle.Width %></td>
       <td><%=rectangle.Height %></td>
       <td><%=rectangle.Color %></td>
-      <td><canvas id="<%=rectangle.number %>" width="<%=rectangle.Width %>" height="<%=rectangle.Height %>" style="border:1px solid #000000;"></canvas></td>
+      <td><canvas id="<%=dom_id(rectangle)%>" width="<%=rectangle.Width %>" height="<%=rectangle.Height %>" style="border:1px solid #000000;"></canvas></td>
       <td><script>
-      var c = document.getElementById("<%=rectangle.number %>");
+      var c = document.getElementById("<%=dom_id(rectangle)%>");
       var ctx = c.getContext("2d");
       ctx.fillStyle = "<%=rectangle.Color %>";
       ctx.fillRect(0,0,"<%=rectangle.Width %>","<%=rectangle.Height %>");

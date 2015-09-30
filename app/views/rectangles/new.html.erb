@@ -1,9 +1,5 @@
 <%= form_for :rectangle, url: rectangles_path do |f| %>
   <p>
-    <%= f.label :number %><br>
-    <%= f.text_field :number %>
-  </p>
-  <p>
     <%= f.label :Width %><br>
     <%= f.text_field :Width %>
   </p>
@@ -18,7 +14,6 @@
     <%= f.text_field :Color %>
   </p>
 
- 
   <p>
     <%= f.submit %>
   </p>

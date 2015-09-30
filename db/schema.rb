@@ -11,18 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150930015802) do
+ActiveRecord::Schema.define(version: 20150930035940) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "rectangles", force: :cascade do |t|
-    t.integer  "number"
     t.integer  "Width"
     t.integer  "Height"
     t.string   "Color"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "number"
+    t.integer  "Numbers"
   end
 
 end
