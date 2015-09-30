@@ -1,0 +1,26 @@
+<%= form_for :rectangle, url: rectangles_path do |f| %>
+  <p>
+    <%= f.label :number %><br>
+    <%= f.text_field :number %>
+  </p>
+  <p>
+    <%= f.label :Width %><br>
+    <%= f.text_field :Width %>
+  </p>
+ 
+  <p>
+    <%= f.label :Height %><br>
+    <%= f.text_field :Height %>
+  </p>
+
+  <p>
+    <%= f.label :Color %><br>
+    <%= f.text_field :Color %>
+  </p>
+
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+<%= link_to 'Back', rectangles_path %>

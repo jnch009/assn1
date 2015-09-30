@@ -1,0 +1,26 @@
+<h1>Listing rectangles</h1>
+<%= link_to 'New rectangle', new_rectangle_path %>
+<table>
+  <tr>
+    <th>Number</th>
+    <th>Width</th>
+    <th>Height</th>
+    <th>Color</th>
+    <th>Rectangle</th>
+  </tr>
+  <%@rectangles.each do |rectangle| %>
+    <tr>
+      <td><%=rectangle.number %></td>
+      <td><%=rectangle.Width %></td>
+      <td><%=rectangle.Height %></td>
+      <td><%=rectangle.Color %></td>
+      <td><canvas id="<%=rectangle.number %>" width="<%=rectangle.Width %>" height="<%=rectangle.Height %>" style="border:1px solid #000000;"></canvas></td>
+      <td><script>
+      var c = document.getElementById("<%=rectangle.number %>");
+      var ctx = c.getContext("2d");
+      ctx.fillStyle = "<%=rectangle.Color %>";
+      ctx.fillRect(0,0,"<%=rectangle.Width %>","<%=rectangle.Height %>");
+      </script><td>
+    </tr>
+  <% end %>
+</table>
