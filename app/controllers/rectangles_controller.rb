@@ -26,11 +26,12 @@ class RectanglesController < ApplicationController
 	 	@rectangle = Rectangle.find(params[:id])
  
  	 	if @rectangle.update(rectangle_params)
-    		redirect_to @rectangle
+ 	 		redirect_to @rectangle
   		else
-    		render 'edit'
+  			render 'edit'
   		end
 	end
+
 	def destroy
   		@rectangle = Rectangle.find(params[:id])
   		@rectangle.destroy
@@ -39,6 +40,6 @@ class RectanglesController < ApplicationController
 
 	private
   		def rectangle_params
-    		params.require(:rectangle).permit(:Width, :Height, :Color, :Fill, :FillColor)
+    		params.require(:rectangle).permit(:Width, :Height, :Color, :Fill, :FillColor, :FillAll)
   		end
 end

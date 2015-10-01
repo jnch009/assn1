@@ -7,6 +7,8 @@ class CreateRectangles < ActiveRecord::Migration
       t.integer :Fill
       t.string :FillColor
       change_column :rectangles,:Fill ,:decimal
+      add_column :rectangles,:FillAll,:boolean
+      add_column :rectangles,:NoFillAll,:boolean
 
       t.timestamps null: false
     end

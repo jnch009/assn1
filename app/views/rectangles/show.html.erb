@@ -1,6 +1,3 @@
-<% if @rectangle.Fill < 1 %>
-  <%= "the ice clone is functioning properly" %>
-  <%end%>
 <p>
   <strong>Width:</strong>
   <%= @rectangle.Width %>
@@ -16,19 +13,20 @@
    <%= @rectangle.Color%>
 </p>
 
-
-
 <canvas id="myCanvas" width="<%=@rectangle.Width%>" height="<%=@rectangle.Height%>" style="border:1px solid #000000;"></canvas>
 <script>
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 ctx.fillStyle = "<%=@rectangle.Color%>";
 ctx.fillRect(0,0,"<%=@rectangle.Fill*@rectangle.Width%>","<%=@rectangle.Fill*@rectangle.Height%>");
-ctx.fillStyle = "brown";
-ctx.fillRect("<%=@rectangle.Fill*@rectangle.Width%>",0,"<%=@rectangle.Fill*@rectangle.Width%>","<%=@rectangle.Height%>");
-ctx.fillStyle = "brown";
-ctx.fillRect(0,"<%=@rectangle.Fill*@rectangle.Height%>","<%=@rectangle.Fill*@rectangle.Width%>","<%=@rectangle.Fill*@rectangle.Height%>");
+if (rectangle.Fill < 1.0 && rectangle.FillColor != ""){
+	ctx.fillStyle = "<%=@rectangle.FillColor%>";
+	ctx.fillRect("<%=@rectangle.Fill*@rectangle.Width%>",0,"<%=@rectangle.Fill*@rectangle.Width%>","<%=@rectangle.Height%>");
+	ctx.fillStyle = "<%=@rectangle.FillColor%>";
+	ctx.fillRect(0,"<%=@rectangle.Fill*@rectangle.Height%>","<%=@rectangle.Fill*@rectangle.Width%>","<%=@rectangle.Fill*@rectangle.Height%>");
+}
+
 </script><br>
 
-<%= link_to 'Edit', edit_rectangle_path(@rectangle) %> 
+<%= link_to 'Edit', edit_rectangle_path(@rectangle)%> 
 <%= link_to 'Back', rectangles_path %>

@@ -27,6 +27,12 @@
       var ctx = c.getContext("2d");
       ctx.fillStyle = "<%=rectangle.Color%>";
       ctx.fillRect(0,0,"<%=rectangle.Fill*rectangle.Width %>","<%=rectangle.Fill*rectangle.Height %>");
+      if (<%=rectangle.Fill%> < 1.0){
+        ctx.fillStyle = "<%=rectangle.FillColor%>";
+        ctx.fillRect("<%=rectangle.Fill*rectangle.Width%>",0,"<%=rectangle.Fill*rectangle.Width%>","<%=rectangle.Height%>");
+        ctx.fillStyle = "<%=rectangle.FillColor%>";
+        ctx.fillRect(0,"<%=rectangle.Fill*rectangle.Height%>","<%=rectangle.Fill*rectangle.Width%>","<%=rectangle.Fill*rectangle.Height%>");
+      }
       <%=var_name+=1%>;
       </script><td>
       <td><%= link_to 'Show', rectangle_path(rectangle) %></td> 
