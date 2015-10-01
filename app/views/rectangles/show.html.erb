@@ -21,9 +21,9 @@ ctx.fillStyle = "<%=@rectangle.Color%>";
 ctx.fillRect(0,0,"<%=@rectangle.Fill*@rectangle.Width%>","<%=@rectangle.Fill*@rectangle.Height%>");
 if (<%=@rectangle.Fill%> < 1.0 && "<%=@rectangle.FillColor%>" != ''){
 	ctx.fillStyle = "<%=@rectangle.FillColor%>";
-	ctx.fillRect("<%=@rectangle.Fill*@rectangle.Width%>",0,"<%=@rectangle.Fill*@rectangle.Width%>","<%=@rectangle.Height%>");
+	ctx.fillRect("<%=@rectangle.Fill*@rectangle.Width%>",0,"<%=@rectangle.Width%>","<%=@rectangle.Height%>");
 	ctx.fillStyle = "<%=@rectangle.FillColor%>";
-	ctx.fillRect(0,"<%=@rectangle.Fill*@rectangle.Height%>","<%=@rectangle.Fill*@rectangle.Width%>","<%=@rectangle.Fill*@rectangle.Height%>");
+	ctx.fillRect(0,"<%=@rectangle.Fill*@rectangle.Height%>","<%=@rectangle.Width%>","<%=@rectangle.Height%>");
 }
 
 </script><br>
