@@ -32,14 +32,13 @@ class RectanglesController < ApplicationController
   		end
 	end
 	def destroy
-  		@article = Article.find(params[:id])
-  		@article.destroy
- 
-  		redirect_to articles_path
+  		@rectangle = Rectangle.find(params[:id])
+  		@rectangle.destroy
+  		redirect_to rectangles_path
 	end
 
 	private
   		def rectangle_params
-    		params.require(:rectangle).permit(:Width, :Height, :Color, :Numbers)
+    		params.require(:rectangle).permit(:Width, :Height, :Color, :Fill, :FillColor)
   		end
 end
