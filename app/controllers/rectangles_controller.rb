@@ -40,6 +40,6 @@ class RectanglesController < ApplicationController
 
 	private
   		def rectangle_params
-    		params.require(:rectangle).permit(:Width, :Height, :Color, :Fill, :FillColor, :FillAll)
+    		params.require(:rectangle).permit(:Width, :Height, :Color, :Fill, :FillColor)
   		end
 end

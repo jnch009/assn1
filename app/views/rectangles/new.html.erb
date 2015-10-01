@@ -27,7 +27,7 @@
 
   <p>
     <%= f.label :Color%><br>
-    <%= f.text_field :Color%>
+    <%= f.select :Color, ['Blue','Red','Black','Green','Yellow','Teal','Orange','Gray','Brown','Orchid']%>
   </p>
 
   <p>
@@ -37,7 +37,7 @@
 
    <p>
     <%= f.label :FillColor, "If your fill value is not 1, you may choose to fill the rest of your rectangle with another color"%><br>
-    <%= f.text_field :FillColor%>
+    <%= f.select :FillColor, ['Blue','Red','Black','Green','Yellow','Teal','Orange','Gray','Brown','Orchid']%>
   </p>
 
     <%= f.submit %>

@@ -19,7 +19,7 @@ var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 ctx.fillStyle = "<%=@rectangle.Color%>";
 ctx.fillRect(0,0,"<%=@rectangle.Fill*@rectangle.Width%>","<%=@rectangle.Fill*@rectangle.Height%>");
-if (rectangle.Fill < 1.0 && rectangle.FillColor != ""){
+if (rectangle.Fill < 1.0 && rectangle.FillColor ==== ""){
 	ctx.fillStyle = "<%=@rectangle.FillColor%>";
 	ctx.fillRect("<%=@rectangle.Fill*@rectangle.Width%>",0,"<%=@rectangle.Fill*@rectangle.Width%>","<%=@rectangle.Height%>");
 	ctx.fillStyle = "<%=@rectangle.FillColor%>";
