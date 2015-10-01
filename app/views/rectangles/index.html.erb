@@ -8,6 +8,7 @@
     <th>Height</th>
     <th>Color</th>
     <th>Fill</th>
+    <th>Fill Color</th>
     <th>Area</th>
     <th>Rectangle</th>
     <th colspan="3"></th>
@@ -20,6 +21,7 @@
       <td><%=rectangle.Height %></td>
       <td><%=rectangle.Color%></td>
       <td><%=rectangle.Fill%></td>
+      <td><%=rectangle.FillColor%></td>
       <td><%=area = rectangle.Width*rectangle.Height%></td>
       <td><canvas id="<%=var_name%>" width="<%=rectangle.Width %>" height="<%=rectangle.Height %>" style="border:1px solid #000000;"></canvas></td>
       <td><script>
@@ -27,7 +29,7 @@
       var ctx = c.getContext("2d");
       ctx.fillStyle = "<%=rectangle.Color%>";
       ctx.fillRect(0,0,"<%=rectangle.Fill*rectangle.Width %>","<%=rectangle.Fill*rectangle.Height %>");
-      if (rectangle.Fill < 1.0 && rectangle.FillColor === 0){
+      if (<%=rectangle.Fill%> < 1.0 && "<%=rectangle.FillColor%>" != ''){
         ctx.fillStyle = "<%=rectangle.FillColor%>";
         ctx.fillRect("<%=rectangle.Fill*rectangle.Width%>",0,"<%=rectangle.Fill*rectangle.Width%>","<%=rectangle.Height%>");
         ctx.fillStyle = "<%=rectangle.FillColor%>";
