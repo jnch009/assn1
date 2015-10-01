@@ -4,12 +4,12 @@ one:
   Width: 1
   Height: 1
   Color: MyString
-  Fill: 1
+  Fill: 9.99
   FillColor: MyString
 
 two:
   Width: 1
   Height: 1
   Color: MyString
-  Fill: 1
+  Fill: 9.99
   FillColor: MyString

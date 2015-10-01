@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: assn1_development
+  database: assn1development_db
   username: Jeremy
   password: keyboard123
 
@@ -59,7 +59,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: assn1_test
+  database: assn1test_db
   username: Jeremy
   password: keyboard123
 
@@ -84,6 +84,6 @@ test:
 #
 production:
   <<: *default
-  database: assn1_production
+  database: assn1production_db
   username: Jeremy
   password: keyboard123
