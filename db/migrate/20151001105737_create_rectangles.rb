@@ -1,9 +1,6 @@
 class CreateRectangles < ActiveRecord::Migration
   def change
     create_table :rectangles do |t|
-      remove_column :rectangle, :Color, :string
-      add_column :rectangles,:Color,:string
-      remove_column :rectangles,:Fill,:decimal
       t.integer :Width
       t.integer :Height
       t.string :Color
