@@ -1,3 +1,4 @@
+<body bgcolor="LightGray">
 <p>
   <strong>Width:</strong>
   <%= @rectangle.Width %>
@@ -11,6 +12,16 @@
 <p>
    <strong>Color:</strong>
    <%= @rectangle.Color%>
+</p>
+
+<p>
+   <strong>Fill Color:</strong>
+   <%= @rectangle.FillColor%>
+</p>
+
+<p>
+  <strong>Area:</strong>
+  <%= @rectangle.Height*@rectangle.Width %>
 </p>
 
 <canvas id="myCanvas" width="<%=@rectangle.Width%>" height="<%=@rectangle.Height%>" style="border:1px solid #000000;"></canvas>
