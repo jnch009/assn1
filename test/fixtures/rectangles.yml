@@ -3,13 +3,13 @@
 one:
   Width: 1
   Height: 1
-  Color: MyString
   Fill: 9.99
   FillColor: MyString
+  Color: MyString
 
 two:
   Width: 1
   Height: 1
-  Color: MyString
   Fill: 9.99
   FillColor: MyString
+  Color: MyString

@@ -84,6 +84,6 @@ test:
 #
 production:
   <<: *default
-  database: assn1production_db
+  database: assn1_production
   username: Jeremy
   password: keyboard123
