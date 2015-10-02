@@ -1,5 +1,5 @@
 <h1>Listing rectangles</h1>
-<body bgcolor="Cyan">
+<body bgcolor="LightGray">
 <%= link_to 'New rectangle', new_rectangle_path %>
 <table>
   <tr>
@@ -39,7 +39,7 @@
       </script><td>
       <td><%= link_to 'Show', rectangle_path(rectangle) %></td> 
       <td><%= link_to 'Edit', edit_rectangle_path(rectangle) %></td> 
-      <td><%= button_to 'Destroy', rectangle_path(rectangle), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to 'Destroy', rectangle_path(rectangle), method: :destroy, data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
 </table>

@@ -1,5 +1,5 @@
 <h1>Editing rectangle</h1>
- 
+ <body bgcolor="LightGray">
 <%= form_for :rectangle, url: rectangle_path(@rectangle), method: :patch do |f| %>
  
   <% if @rectangle.errors.any? %>
@@ -32,7 +32,7 @@
   </p>
 
   <p>
-    <%= f.label :Fill%><br>
+    <%= f.label :Fill%>(0.0-1.0)<br>
     <%= f.text_field :Fill%>
   </p>
 
